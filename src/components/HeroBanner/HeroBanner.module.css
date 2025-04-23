@@ -1,0 +1,435 @@
+.heroBanner {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 700px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.videoBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: #000;
+}
+
+.videoPlayer {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  opacity: 1;
+  background-color: #000;
+}
+
+.videoOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0.4) 30%,
+    rgba(0, 0, 0, 0.4) 60%,
+    rgba(0, 0, 0, 0.9) 85%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  z-index: 2;
+  transition: opacity 0.3s ease;
+}
+
+.playingOverlay {
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.4) 0%,
+    rgba(0, 0, 0, 0.2) 30%,
+    rgba(0, 0, 0, 0.2) 60%,
+    rgba(0, 0, 0, 0.6) 85%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
+}
+
+.contentContainer {
+  position: absolute;
+  z-index: 5;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 60px;
+  right: 60px;
+  display: flex;
+  flex-direction: column;
+  margin-top: -80px; /* Offset to account for the video list */
+}
+
+.videoInfo {
+  max-width: 650px;
+}
+
+.badgeContainer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.topBadge {
+  background-color: #e50914;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-right: 10px;
+  text-transform: uppercase;
+}
+
+.badgeText {
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.videoTitle {
+  font-size: 56px;
+  font-weight: 900;
+  letter-spacing: -1px;
+  margin-bottom: 8px;
+  line-height: 1.1;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  color: white;
+}
+
+.videoSubtitle {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  color: white;
+}
+
+.videoDescription {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 24px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+  color: #e6e6e6;
+  max-width: 600px;
+}
+
+.actions {
+  display: flex;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.playButton, .moreInfoButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 24px;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+}
+
+.playButton {
+  background-color: white;
+  color: black;
+}
+
+.playButton:hover {
+  background-color: rgba(255, 255, 255, 0.85);
+}
+
+.moreInfoButton {
+  background-color: rgba(109, 109, 110, 0.7);
+  color: white;
+}
+
+.moreInfoButton:hover {
+  background-color: rgba(109, 109, 110, 0.5);
+}
+
+.playButton svg, .moreInfoButton svg {
+  margin-right: 8px;
+}
+
+.volumeControl {
+  display: flex;
+  align-items: center;
+  background-color: rgba(109, 109, 110, 0.7);
+  border-radius: 4px;
+  padding: 6px 12px;
+  transition: all 0.2s ease;
+}
+
+.volumeControl:hover {
+  background-color: rgba(109, 109, 110, 0.5);
+}
+
+.muteButton {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  margin-right: 8px;
+}
+
+.volumeSlider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 80px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 2px;
+  outline: none;
+}
+
+.volumeSlider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 12px;
+  height: 12px;
+  background: white;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.volumeSlider::-moz-range-thumb {
+  width: 12px;
+  height: 12px;
+  background: white;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+}
+
+.videoListSection {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  padding: 0 60px 40px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.7) 70%, transparent 100%);
+}
+
+.sectionTitle {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: white;
+  position: relative;
+  padding-top: 20px;
+}
+
+.videoList {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding-bottom: 16px;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
+  position: relative;
+}
+
+.videoList::-webkit-scrollbar {
+  height: 6px;
+}
+
+.videoList::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.videoList::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 6px;
+}
+
+.videoCard {
+  flex: 0 0 260px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+  background-color: #1b1b1b;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.videoCard:hover {
+  transform: scale(1.05);
+  z-index: 11;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+.videoCard.activeVideo {
+  border: 2px solid #E50914;
+}
+
+.thumbnailContainer {
+  position: relative;
+  width: 100%;
+  height: 150px;
+  overflow: hidden;
+}
+
+.thumbnailVideo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.thumbnailContainer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.videoViews {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  color: white;
+  z-index: 2;
+}
+
+.playIconOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  z-index: 1;
+}
+
+.videoCard:hover .playIconOverlay {
+  opacity: 1;
+}
+
+.videoCardInfo {
+  padding: 12px;
+  background-color: #141414;
+  position: relative;
+  z-index: 1;
+}
+
+.videoCardInfo h4 {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: white;
+}
+
+.videoCardInfo p {
+  font-size: 12px;
+  color: #b3b3b3;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.comingSoonCard {
+  opacity: 0.7;
+  pointer-events: none;
+  position: relative;
+  cursor: default;
+}
+
+.comingSoonOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+  z-index: 3;
+}
+
+/* Add class for when video is playing */
+.videoPlaying .videoListSection {
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+
+.videoPlaying .videoListSection:hover {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .heroBanner {
+    height: auto;
+    min-height: 100vh;
+  }
+  
+  .contentContainer {
+    top: 40%;
+    left: 20px;
+    right: 20px;
+  }
+  
+  .videoInfo {
+    max-width: 100%;
+  }
+  
+  .videoTitle {
+    font-size: 36px;
+  }
+  
+  .videoSubtitle {
+    font-size: 20px;
+  }
+  
+  .videoDescription {
+    font-size: 14px;
+    max-width: 100%;
+  }
+  
+  .videoListSection {
+    padding: 0 20px 20px;
+  }
+  
+  .videoCard {
+    flex: 0 0 200px;
+  }
+  
+  .thumbnailContainer {
+    height: 120px;
+  }
+} 

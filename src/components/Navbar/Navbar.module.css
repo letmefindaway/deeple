@@ -1,0 +1,201 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 68px;
+  z-index: 1000;
+  padding: 0 60px;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(180deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 100%);
+  transition: background-color 0.3s ease;
+}
+
+.scrolled {
+  background-color: #141414;
+}
+
+.navbarContent {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.leftSide {
+  display: flex;
+  align-items: center;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  margin-right: 40px;
+}
+
+.logoImage {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+}
+
+.logo {
+  color: #E50914;
+  font-size: 28px;
+  font-weight: bold;
+  margin-right: 40px;
+  letter-spacing: 1px;
+  font-family: 'Arial Black', sans-serif;
+}
+
+.navLinks {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navLinks li {
+  margin-right: 24px;
+}
+
+.navLinks li a {
+  color: #e5e5e5;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  position: relative;
+  padding: 5px 0;
+}
+
+.navLinks li a:hover {
+  color: #ffffff;
+}
+
+.navLinks li a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #E50914;
+  transition: width 0.3s ease;
+}
+
+.navLinks li a:hover::after {
+  width: 100%;
+}
+
+.rightSide {
+  display: flex;
+  align-items: center;
+}
+
+.contractAddressContainer {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.caLabel {
+  font-size: 14px;
+  font-weight: 600;
+  color: #e5e5e5;
+  margin-right: 6px;
+}
+
+.addressWrapper {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+  padding: 6px 10px;
+  transition: all 0.2s ease;
+}
+
+.addressWrapper:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.contractAddress {
+  font-size: 14px;
+  font-family: monospace;
+  color: #E50914;
+  margin-right: 8px;
+}
+
+.copyButton {
+  background: none;
+  border: none;
+  color: #e5e5e5;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.copyButton:hover {
+  color: white;
+}
+
+.copiedTooltip {
+  position: absolute;
+  bottom: -30px;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  z-index: 100;
+}
+
+@media (max-width: 1200px) {
+  .navbar {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0 20px;
+  }
+
+  .logo {
+    margin-right: 20px;
+    font-size: 24px;
+  }
+  
+  .logoContainer {
+    margin-right: 20px;
+  }
+  
+  .logoImage {
+    height: 30px;
+  }
+  
+  .navLinks li {
+    margin-right: 15px;
+  }
+  
+  .navLinks li a {
+    font-size: 13px;
+  }
+  
+  .contractAddress {
+    display: none;
+  }
+  
+  .addressWrapper {
+    padding: 6px;
+  }
+  
+  .caLabel {
+    font-size: 12px;
+  }
+} 

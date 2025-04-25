@@ -42,8 +42,10 @@ const Navbar: React.FC = () => {
           </div>
           
           <ul className={styles.navLinks}>
-            <li><a target='_blank' href="https://x.com/deeplearnonsol?s=21">Twitter</a></li>
-            {/* <li><a href="#telegram">Telegram</a></li> */}
+          <li><a target='_blank' href="https://x.com/deeplearnonsol?s=21">Twitter</a></li>
+          <li><a target='_blank' href="https://www.instagram.com/deeplesolana">Instagram</a></li>
+          <li><a target='_blank' href="https://www.tiktok.com/@deeplesol">TikTok</a></li>
+          {/* <li><a href="#telegram">Telegram</a></li> */}
             <li><a target='_blank' href="https://pump.fun/coin/E7jDjYFT6VAxSbtPPRnF8pEeWpsVCLbM7LyTAgM1pump?include-nsfw=true">Pump.fun</a></li>
           </ul>
         </div>

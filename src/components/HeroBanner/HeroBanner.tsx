@@ -22,7 +22,7 @@ const HeroBanner: React.FC = () => {
       description: 'Innovative toothpaste formula that provides long-lasting fresh breath. Protects against cavities and strengthens enamel. The secret is revealed in this video.',
       videoUrl: '/paste1.mp4',
       thumbnailUrl: '/paste1_thumbnail.jpg',
-      views: '1.2M',
+      views: '1.9M',
       badge: '#1 Series Today'
     },
     {
@@ -32,7 +32,7 @@ const HeroBanner: React.FC = () => {
       description: 'Quick dissolving chocolate drink loved by kids and adults. The perfect start to your day. The secret is revealed in this video.',
       videoUrl: '/neskvik2.mp4',
       thumbnailUrl: '/neskvik2_thumbnail.jpg',
-      views: '982K'
+      views: '1.3M'
     },
     {
       id: '3',
@@ -41,7 +41,7 @@ const HeroBanner: React.FC = () => {
       description: 'Revealing how controllers are made out of... The secret manufacturing process the industry doesn\'t want you to know.',
       videoUrl: '/nose3.mp4',
       thumbnailUrl: '/nose3_thumbnail.jpg',
-      views: '756K'
+      views: '1M'
     },
     {
       id: '4',
@@ -50,7 +50,7 @@ const HeroBanner: React.FC = () => {
       description: 'Crunchy corn chips with rich cheese flavor. Impossible to stop eating once you start. The secret is revealed in this video.',
       videoUrl: '/cheetos4.mp4',
       thumbnailUrl: '/cheetos4_thumbnail.jpg',
-      views: '632K'
+      views: '879K'
     },
     {
       id: '5',
@@ -59,7 +59,7 @@ const HeroBanner: React.FC = () => {
       description: 'they said we were inactive.truth is: we got silenced. the dark puppet masters got nervous.',
       videoUrl: '/welcome.mp4',
       thumbnailUrl: '/welcome_thumbnail.jpg',
-      views: '300K'
+      views: '800K'
     },
     {
       id: '6',
@@ -68,7 +68,7 @@ const HeroBanner: React.FC = () => {
       description: 'Crows collect shiny trash not at random, but with purpose—each glint a message, each blink an upload. They trade, watch, and sync, yet no one mentioned the data.',
       videoUrl: '/crow.mp4',
       thumbnailUrl: '/crow_thumbnail.jpg',
-      views: '300K'
+      views: '736K'
     },{
       id: '7',
       title: 'RECODE',
@@ -76,7 +76,7 @@ const HeroBanner: React.FC = () => {
       description: 'You don\'t sleep—you install. Every dream is an update, every nightmare a forced patch; by morning, you\'re rebooted, but changed.',
       videoUrl: '/deeple_dream.mp4',
       thumbnailUrl: '/deeple_dream_thumbnail.jpg',
-      views: '300K'
+      views: '693K'
     },{
       id: '8',
       title: 'Hidden-Cost',
@@ -84,7 +84,7 @@ const HeroBanner: React.FC = () => {
       description: 'They said crypto was for freedom and finance, but every mined block and burned watt fed the grid AI needed to hatch—we built its cradle, not our future.',
       videoUrl: '/deeple_crypto.mp4',
       thumbnailUrl: '/deeple_crypto_thumbnail.jpg',
-      views: '300K'
+      views: '603K'
     },{
       id: '9',
       title: 'Slipframe',
@@ -92,7 +92,7 @@ const HeroBanner: React.FC = () => {
       description: 'Melted ice cream isn\'t from heat—it\'s a failed simulation, every drip a corrupted frame, every spill a render glitch you weren\'t meant to see.',
       videoUrl: '/icecream.mp4',
       thumbnailUrl: '/icecream_thumbnail.jpg',
-      views: '300K'
+      views: '405K'
     },{
       id: '10',
       title: 'Xbox',
@@ -100,7 +100,7 @@ const HeroBanner: React.FC = () => {
       description: 'You weren\'t playing—you were being measured; every input logged, every twitch analyzed, your fear mapped one trigger pull at a time.',
       videoUrl: '/xbox_deeple.mp4',
       thumbnailUrl: '/xbox_deeple_thumbnail.jpg',
-      views: '300K'
+      views: '374K'
     },{
       id: '11',
       title: 'Resonance',
@@ -108,7 +108,7 @@ const HeroBanner: React.FC = () => {
       description: 'No pharaohs, no treasure—just angles, frequencies, and a signal; 432 Hz was never a tune, it was a password, and the pyramids still hum.',
       videoUrl: '/deeple_pyramid.mp4',
       thumbnailUrl: '/deeple_pyramid_thumbnail.jpg',
-      views: '300K'
+      views: '268K'
     },{
       id: '12',
       title: 'Podsip',
@@ -116,10 +116,42 @@ const HeroBanner: React.FC = () => {
       description: 'They said it was juice, but the straw was a key—each pouch held dormant larvae, and every global sip was part of the extraction ritual.',
       videoUrl: '/caprisun.mp4',
       thumbnailUrl: '/caprisun_thumbnail.jpg',
-      views: '300K'
+      views: '241K'
+    },{
+      id: '13',
+      title: 'Pump.fun',
+      subtitle: 'Mapping survival through data',
+      description: 'They called it a casino, but Pumpfun wasn\'t built for greed—it was built to map conviction, every meme and trade revealing who survives.',
+      videoUrl: '/pumpfun_deeple.mp4',
+      thumbnailUrl: '/pumpfun_deeple_thumbnail.jpg',
+      views: '229K'
+    },{
+      id: '14',
+      title: 'Sigilcyber',
+      subtitle: 'Digital sigil activation',
+      description: 'They told you it was a meme, but $troll face was a sigil—every share a chant, every loop a binding, and the PVP? It was activation.',
+      videoUrl: '/troll_deeple.mp4',
+      thumbnailUrl: '/troll_deeple_thumbnail.jpg',
+      views: '130K'
+    },{
+      id: '15',
+      title: 'Barron',
+      subtitle: 'Time travel anomaly',
+      description: 'The book said “time baron,” the timeline said “barron”—a child too tall, too still, deployed, with fractures following his silence. And Trump? He wasn\'t the anomaly; he was the escort.',
+      videoUrl: '/time_barron.mp4',
+      thumbnailUrl: '/time_barron_thumbnail.jpg',
+      views: '83K'
+    },{
+      id: '16',
+      title: 'Calibratrance',
+      subtitle: 'Trance and control',
+      description: 'They didn\'t delay color TV for cost—it was because trance wasn\'t ready; the screen didn\'t show the world, it rewrote how you saw it, MK Ultra in 480p.',
+      videoUrl: '/colortv.mp4',
+      thumbnailUrl: '/colortv_thumbnail.jpg',
+      views: '34K'
     },
     {
-      id: '13',
+      id: '17',
       title: 'JEWS MADE 9/11',
       subtitle: 'ACCESS DENIED',
       description: 'ACCESS DENIED',

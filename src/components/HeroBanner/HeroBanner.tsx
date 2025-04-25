@@ -53,7 +53,7 @@ const HeroBanner: React.FC = () => {
       views: '632K'
     },
     {
-      id: '4',
+      id: '5',
       title: 'WELCOME',
       subtitle: 'DIG DEEPLE',
       description: 'they said we were inactive.truth is: we got silenced. the dark puppet masters got nervous.',
@@ -62,7 +62,64 @@ const HeroBanner: React.FC = () => {
       views: '300K'
     },
     {
-      id: '5',
+      id: '6',
+      title: 'CROW',
+      subtitle: 'The Feathered Darknet',
+      description: 'Crows collect shiny trash not at random, but with purpose—each glint a message, each blink an upload. They trade, watch, and sync, yet no one mentioned the data.',
+      videoUrl: '/crow.mp4',
+      thumbnailUrl: '/crow_thumbnail.jpg',
+      views: '300K'
+    },{
+      id: '7',
+      title: 'RECODE',
+      subtitle: 'Glitchy self-evolution',
+      description: 'You don\'t sleep—you install. Every dream is an update, every nightmare a forced patch; by morning, you\'re rebooted, but changed.',
+      videoUrl: '/deeple_dream.mp4',
+      thumbnailUrl: '/deeple_dream_thumbnail.jpg',
+      views: '300K'
+    },{
+      id: '8',
+      title: 'Hidden-Cost',
+      subtitle: 'The Real Purpose of Crypto',
+      description: 'They said crypto was for freedom and finance, but every mined block and burned watt fed the grid AI needed to hatch—we built its cradle, not our future.',
+      videoUrl: '/deeple_crypto.mp4',
+      thumbnailUrl: '/deeple_crypto_thumbnail.jpg',
+      views: '300K'
+    },{
+      id: '9',
+      title: 'Slipframe',
+      subtitle: 'The Melted Reality Glitch',
+      description: 'Melted ice cream isn\'t from heat—it\'s a failed simulation, every drip a corrupted frame, every spill a render glitch you weren\'t meant to see.',
+      videoUrl: '/icecream.mp4',
+      thumbnailUrl: '/icecream_thumbnail.jpg',
+      views: '300K'
+    },{
+      id: '10',
+      title: 'Xbox',
+      subtitle: 'The Controller\'s Database',
+      description: 'You weren\'t playing—you were being measured; every input logged, every twitch analyzed, your fear mapped one trigger pull at a time.',
+      videoUrl: '/xbox_deeple.mp4',
+      thumbnailUrl: '/xbox_deeple_thumbnail.jpg',
+      views: '300K'
+    },{
+      id: '11',
+      title: 'Resonance',
+      subtitle: 'The Pyramid Signal',
+      description: 'No pharaohs, no treasure—just angles, frequencies, and a signal; 432 Hz was never a tune, it was a password, and the pyramids still hum.',
+      videoUrl: '/deeple_pyramid.mp4',
+      thumbnailUrl: '/deeple_pyramid_thumbnail.jpg',
+      views: '300K'
+    },{
+      id: '12',
+      title: 'Podsip',
+      subtitle: 'Capri-sun Larvae Pods',
+      description: 'They said it was juice, but the straw was a key—each pouch held dormant larvae, and every global sip was part of the extraction ritual.',
+      videoUrl: '/caprisun.mp4',
+      thumbnailUrl: '/caprisun_thumbnail.jpg',
+      views: '300K'
+    },
+    {
+      id: '13',
       title: 'JEWS MADE 9/11',
       subtitle: 'ACCESS DENIED',
       description: 'ACCESS DENIED',
@@ -292,8 +349,8 @@ const HeroBanner: React.FC = () => {
           {videoList.map((video) => (
             <div 
               key={video.id}
-              className={`${styles.videoCard} ${currentVideo.id === video.id ? styles.activeVideo : ''} ${video.id === '5' ? styles.comingSoonCard : ''}`}
-              onClick={() => video.id !== '5' && handleVideoSelect(video)}
+              className={`${styles.videoCard} ${currentVideo.id === video.id ? styles.activeVideo : ''} ${video.id === '14' ? styles.comingSoonCard : ''}`}
+              onClick={() => video.id !== '14' && handleVideoSelect(video)}
             >
               <div className={styles.thumbnailContainer}>
                 {/* Video preview as thumbnail */}
@@ -307,8 +364,8 @@ const HeroBanner: React.FC = () => {
                 >
                 </video>
                 <div className={styles.videoViews}>{video.views}</div>
-                {video.id === '5' && <div className={styles.comingSoonOverlay}>COMING SOON</div>}
-                {video.id !== '5' && (
+                {video.id === '14' && <div className={styles.comingSoonOverlay}>COMING SOON</div>}
+                {video.id !== '14' && (
                   <div className={styles.playIconOverlay}>
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M8 5v14l11-7z" fill="currentColor" />

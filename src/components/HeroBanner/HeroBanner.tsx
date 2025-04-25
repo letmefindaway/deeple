@@ -381,8 +381,8 @@ const HeroBanner: React.FC = () => {
           {videoList.map((video) => (
             <div 
               key={video.id}
-              className={`${styles.videoCard} ${currentVideo.id === video.id ? styles.activeVideo : ''} ${video.id === '14' ? styles.comingSoonCard : ''}`}
-              onClick={() => video.id !== '14' && handleVideoSelect(video)}
+              className={`${styles.videoCard} ${currentVideo.id === video.id ? styles.activeVideo : ''} ${video.id === '17' ? styles.comingSoonCard : ''}`}
+              onClick={() => video.id !== '17' && handleVideoSelect(video)}
             >
               <div className={styles.thumbnailContainer}>
                 {/* Video preview as thumbnail */}
@@ -396,8 +396,8 @@ const HeroBanner: React.FC = () => {
                 >
                 </video>
                 <div className={styles.videoViews}>{video.views}</div>
-                {video.id === '14' && <div className={styles.comingSoonOverlay}>COMING SOON</div>}
-                {video.id !== '14' && (
+                {video.id === '17' && <div className={styles.comingSoonOverlay}>COMING SOON</div>}
+                {video.id !== '17' && (
                   <div className={styles.playIconOverlay}>
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M8 5v14l11-7z" fill="currentColor" />
